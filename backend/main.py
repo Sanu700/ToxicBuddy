@@ -49,6 +49,17 @@ app.include_router(analyze.router, prefix=settings.API_V1_STR)
 app.include_router(users.router, prefix=settings.API_V1_STR)
 app.include_router(conversations.router, prefix=settings.API_V1_STR)
 
+# Top-level direct health check aliases for /health and /api/health
+@app.get("/health", tags=["Health"], summary="Top-level health check")
+@app.get(f"{settings.API_V1_STR}/health", tags=["Health"], summary="API health check")
+def direct_health_check():
+    return {
+        "status": "healthy",
+        "service": settings.PROJECT_NAME,
+        "version": settings.VERSION,
+        "environment": settings.ENV
+    }
+
 # Direct top-level alias for POST /api/rewrite
 @app.post(f"{settings.API_V1_STR}/rewrite", response_model=RewriteResponse, tags=["Toxicity Analysis & Rewriting"], summary="Constructive text rewriting endpoint")
 def top_level_rewrite(payload: RewriteRequest):

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Upload, RefreshCw, Copy, Check, MessageSquare } from 'lucide-react';
+import { getApiUrl } from '../config';
 
 export default function ConversationAnalyzer() {
   const [rawText, setRawText] = useState('');
@@ -46,7 +47,7 @@ Rahul: Calm down bhai, let's discuss calmly.`
     if (!rawText.trim()) return;
     setLoading(true);
     try {
-      const res = await fetch('/api/analyze/conversation', {
+      const res = await fetch(getApiUrl('/api/analyze/conversation'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

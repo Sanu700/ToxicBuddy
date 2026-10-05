@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Search } from 'lucide-react';
+import { getApiUrl } from '../config';
 
 export default function UserStatsMatrix() {
   const [userId, setUserId] = useState('Bob');
@@ -11,7 +12,7 @@ export default function UserStatsMatrix() {
     if (!id.trim()) return;
     setLoading(true);
     try {
-      const res = await fetch(`/api/users/${encodeURIComponent(id)}/stats`);
+      const res = await fetch(getApiUrl(`/api/users/${encodeURIComponent(id)}/stats`));
       const data = await res.json();
       setUserStats(data);
     } catch (err) {

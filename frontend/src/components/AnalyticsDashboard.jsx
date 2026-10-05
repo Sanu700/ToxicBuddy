@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { RefreshCw } from 'lucide-react';
+import { getApiUrl } from '../config';
 
 export default function AnalyticsDashboard() {
   const [conversations, setConversations] = useState([]);
@@ -12,7 +13,7 @@ export default function AnalyticsDashboard() {
   const fetchConversations = async () => {
     setLoading(true);
     try {
-      const res = await fetch('/api/conversations');
+      const res = await fetch(getApiUrl('/api/conversations'));
       const data = await res.json();
       setConversations(data);
     } catch (err) {

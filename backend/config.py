@@ -20,8 +20,14 @@ class Settings(BaseSettings):
     # Database
     DATABASE_URL: str = "sqlite:///./toxicbuddy.db"
     
-    # CORS
-    CORS_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:3000", "*"]
+    # CORS Origins (Explicit Vercel Production & Local Development)
+    CORS_ORIGINS: List[str] = [
+        "https://toxicbuddy.vercel.app",
+        "https://toxicbuddy-two.vercel.app",
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "*"
+    ]
     
     model_config = SettingsConfigDict(
         env_file=".env",

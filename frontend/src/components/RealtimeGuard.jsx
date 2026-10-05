@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Copy, RefreshCw, ArrowRight, ArrowDown, Check, Sparkles } from 'lucide-react';
+import { getApiUrl } from '../config';
 
 export default function RealtimeGuard() {
   const [text, setText] = useState('That is a stupid idea, you do not know anything!');
@@ -23,7 +24,7 @@ export default function RealtimeGuard() {
     }
     setLoading(true);
     try {
-      const res = await fetch('/api/analyze/message', {
+      const res = await fetch(getApiUrl('/api/analyze/message'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import RealtimeGuard from './components/RealtimeGuard';
 import ConversationAnalyzer from './components/ConversationAnalyzer';
 import InsightsView from './components/InsightsView';
+import { getApiUrl } from './config';
 
 export default function App() {
   const [mainTab, setMainTab] = useState('analyze');
@@ -10,17 +11,33 @@ export default function App() {
 
   useEffect(() => {
     checkHealth();
+    // Poll health check every 15 seconds to handle Render cold starts
+    const interval = setInterval(checkHealth, 15000);
+    return () => clearInterval(interval);
   }, []);
 
   const checkHealth = async () => {
     try {
-      const res = await fetch('/api/health');
+      const res = await fetch(getApiUrl('/api/health'), {
+        cache: 'no-store'
+      });
       if (res.ok) {
         setApiStatus('online');
       } else {
         setApiStatus('degraded');
       }
     } catch (err) {
+      // Retrying for Render cold start
+      setApiStatus('waking...');
+      try {
+        const retryRes = await fetch(getApiUrl('/health'), { cache: 'no-store' });
+        if (retryRes.ok) {
+          setApiStatus('online');
+          return;
+        }
+      } catch (retryErr) {
+        // Fallback status
+      }
       setApiStatus('offline');
     }
   };
