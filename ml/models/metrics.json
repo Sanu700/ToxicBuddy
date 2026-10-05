@@ -1,0 +1,193 @@
+{
+  "selected_model": "LogisticRegression",
+  "comparison": {
+    "LogisticRegression": {
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "macro_roc_auc": 1.0,
+      "per_label": {
+        "toxic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "insult": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "harassment": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "threat": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "obscene": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "identity_attack": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        }
+      }
+    },
+    "MultinomialNB": {
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "macro_roc_auc": 1.0,
+      "per_label": {
+        "toxic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "insult": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "harassment": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "threat": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "obscene": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "identity_attack": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        }
+      }
+    },
+    "CalibratedLinearSVC": {
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "macro_roc_auc": 1.0,
+      "per_label": {
+        "toxic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "insult": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "harassment": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "threat": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "obscene": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "identity_attack": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        }
+      }
+    },
+    "RandomForest": {
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "macro_roc_auc": 1.0,
+      "per_label": {
+        "toxic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "insult": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "harassment": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "threat": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "obscene": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        },
+        "identity_attack": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0
+        }
+      }
+    }
+  },
+  "tone_classifier": {
+    "accuracy": 1.0,
+    "weighted_f1": 1.0
+  },
+  "target_labels": [
+    "toxic",
+    "insult",
+    "harassment",
+    "threat",
+    "obscene",
+    "identity_attack"
+  ]
+}

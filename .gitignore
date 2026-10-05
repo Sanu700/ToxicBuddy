@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.pytest_cache/
+
+# Data & DB
+*.db
+*.sqlite3
+toxicbuddy.db
+data/toxic_dataset_multilabel.csv
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+.npm
+*.log
+
+# Environment & IDE
+.env
+.env.local
+.vscode/
+.idea/
+.DS_Store
