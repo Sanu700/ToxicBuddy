@@ -20,7 +20,7 @@ export default function Navbar({ mainTab, setMainTab, apiStatus }) {
             </div>
             <div className="flex items-center space-x-2">
               <span className="font-bold text-zinc-100 text-lg tracking-tight">VibeCheck</span>
-              <span className="text-[11px] font-mono font-semibold bg-zinc-800/80 text-orange-400 border border-zinc-700 px-1.5 py-0.5 rounded">2.0</span>
+              
             </div>
           </div>
 
