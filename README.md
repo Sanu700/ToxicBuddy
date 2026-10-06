@@ -1,8 +1,8 @@
-# 🛡️ ToxicBuddy 2.0 — Conversational Toxicity Analysis & Moderation Platform
+# 🛡️ VibeCheck — Conversational Vibe Analysis & Moderation Platform
 
 > An end-to-end full-stack ML platform for real-time toxicity detection, multi-label category scoring, constructive message rewriting, and conversational conflict escalation analysis.
 
-![ToxicBuddy 2.0](https://img.shields.io/badge/ToxicBuddy-v2.0.0-indigo?style=for-the-badge)
+![VibeCheck](https://img.shields.io/badge/ToxicBuddy-v2.0.0-indigo?style=for-the-badge)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?style=flat-square&logo=fastapi)
 ![React](https://img.shields.io/badge/React-18+-61DAFB?style=flat-square&logo=react)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-F7931E?style=flat-square&logo=scikit-learn)
@@ -13,7 +13,7 @@
 
 ## 🎯 Architectural Overview
 
-ToxicBuddy 2.0 transforms the original notebook experiment into a deployable full-stack application. It provides real-time moderation guardrails, conversation-level toxicity progression tracking, and automated reframing of hostile messages into constructive language.
+VibeCheck transforms the original notebook experiment into a deployable full-stack application. It provides real-time moderation guardrails, conversation-level toxicity progression tracking, and automated reframing of hostile messages into constructive language.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -56,7 +56,7 @@ ToxicBuddy 2.0 transforms the original notebook experiment into a deployable ful
 ## 🏗️ Project Structure
 
 ```
-ToxicBuddy/
+VibeCheck/
 ├── backend/
 │   ├── main.py                # FastAPI entrypoint & CORS setup
 │   ├── config.py              # Environment configuration (Pydantic Settings)
@@ -92,7 +92,7 @@ ToxicBuddy/
 
 ## 📊 Machine Learning Model & Evaluation Metrics
 
-ToxicBuddy 2.0 compares multiple lightweight classifier backends on a train/test split. Evaluation results are saved in `ml/models/metrics.json`.
+VibeCheck compares multiple lightweight classifier backends on a train/test split. Evaluation results are saved in `ml/models/metrics.json`.
 
 ### Model Alternatives Evaluation
 
@@ -118,7 +118,7 @@ ToxicBuddy 2.0 compares multiple lightweight classifier backends on a train/test
 
 ```bash
 # Clone repository
-git clone https://github.com/Sanu700/ToxicBuddy.git
+git clone https://github.com/Sanu700/VibeCheck.git
 cd ToxicBuddy
 
 # Create virtual environment
@@ -251,7 +251,7 @@ Transforms a hostile string into a target tone (`Neutral`, `Friendly`, `Professi
 
 ## 📝 Verified Resume Bullets
 
-* **Built ToxicBuddy 2.0**, an end-to-end full-stack conversational moderation platform using **FastAPI**, **React (Vite/Tailwind)**, and **scikit-learn**, serving real-time multi-label toxicity scores with `< 10ms` inference latency.
+* **Built VibeCheck*, an end-to-end full-stack conversational moderation platform using **FastAPI**, **React (Vite/Tailwind)**, and **scikit-learn**, serving real-time multi-label toxicity scores with `< 10ms` inference latency.
 * **Designed a Multi-Label Classifier & Intent-Preserving Rewriter Engine** detecting 6 toxic categories (`toxicity`, `insult`, `harassment`, `threat`, `obscene`, `identity_attack`) and automatically reframing hostile text into 4 constructive tones (`Neutral`, `Friendly`, `Professional`, `Constructive`).
 * **Engineered a Conflict Escalation Detection Algorithm** analyzing conversational turn sequences to flag rapid toxicity spikes, back-and-forth hostility loops, and user risk profiles across group chat exports.
 * **Architected Production-Ready API & Database Pipeline** with SQLAlchemy ORM, SQLite/PostgreSQL support, Pydantic validation schemas, Pytest unit/integration test suite (`100% pass rate`), and Docker deployment.
