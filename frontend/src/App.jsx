@@ -57,7 +57,7 @@ export default function App() {
       {/* Subtle Minimal Footer */}
       <footer className="border-t border-zinc-900 bg-zinc-950 py-5 text-zinc-500 text-xs">
         <div className="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2 font-mono">
-          <span>ToxicBuddy 2.0 • Conversational Toxicity Analysis & Moderation Engine</span>
+          <span>VibeCheck • Conversational Vibe Analysis & Moderation Engine</span>
           <span>FastAPI • React • Vite • Scikit-Learn</span>
         </div>
       </footer>
